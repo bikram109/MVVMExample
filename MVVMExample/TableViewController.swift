@@ -14,9 +14,24 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self, action:#selector(addFollowingUser))
+        
         tableView.register(PersonFollowingCell.self, forCellReuseIdentifier: "person")
         configureModel()
+    }
+    
+    @objc func addFollowingUser(){
+        let alert = UIAlertController(title: "Add Following", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: nil))
+        alert.addTextField { (name) in
+            name.placeholder = "name"
+        }
+        alert.addTextField { (userName) in
+            userName.placeholder = "user name"
+        }
+        
+        present(alert, animated: true, completion: nil)
     }
     
     private func configureModel(){
