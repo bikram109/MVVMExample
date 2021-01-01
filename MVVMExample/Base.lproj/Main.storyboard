@@ -1,58 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v80-vh-Op8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x5f-ls-Lgq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="X6g-TE-uaB">
+        <!--View Controller-->
+        <scene sceneID="699-XD-PTY">
             <objects>
-                <tableViewController id="Zng-FA-4dY" customClass="TableViewController" customModule="MVVMExample" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FQY-5c-6yZ">
+                <viewController id="fOc-DS-VuG" customClass="ViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXB-jR-fJl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4KE-IO-KxP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W9O-p1-BW5">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W9O-p1-BW5" id="R1V-Lf-tg2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Zng-FA-4dY" id="Yvb-Qy-7KB"/>
-                            <outlet property="delegate" destination="Zng-FA-4dY" id="03a-ln-trd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="4cK-CA-u0m"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V63-3c-UC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kmi-No-M2f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyE-aF-M1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618.840579710145" y="-1152.4553571428571"/>
+            <point key="canvasLocation" x="3059.4202898550725" y="-858.48214285714278"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="oWD-2D-QgN">
+        <scene sceneID="mdi-lK-J2y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v80-vh-Op8" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDs-5v-m7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x5f-ls-Lgq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3B-oh-Z5n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ITO-PY-ZSD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zng-FA-4dY" kind="relationship" relationship="rootViewController" id="93G-0R-Eyz"/>
+                        <segue destination="fOc-DS-VuG" kind="relationship" relationship="rootViewController" id="Vyy-bT-TWu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b48-BX-hfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="-1152.4553571428571"/>
+            <point key="canvasLocation" x="2335" y="-759"/>
         </scene>
     </scenes>
     <resources>

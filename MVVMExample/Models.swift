@@ -11,7 +11,7 @@ enum Gender{
     case male, female, unspecified
 }
 
-struct Person {
+struct Person:Hashable {
     let name:String
     let userName:String?
     let address:String?
