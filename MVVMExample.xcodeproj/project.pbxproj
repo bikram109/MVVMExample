@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83CB3E225AAA6A2000694AD /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CB3E125AAA6A2000694AD /* SelfConfiguringCell.swift */; };
 		B870C648259AB86C008A388F /* PersonFollowingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870C647259AB86C008A388F /* PersonFollowingViewModel.swift */; };
 		B8D575BB2599A50600C4B96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D575BA2599A50600C4B96E /* AppDelegate.swift */; };
 		B8D575BD2599A50600C4B96E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D575BC2599A50600C4B96E /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B83CB3E125AAA6A2000694AD /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		B870C647259AB86C008A388F /* PersonFollowingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingViewModel.swift; sourceTree = "<group>"; };
 		B8D575B72599A50600C4B96E /* MVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D575BA2599A50600C4B96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				B8D575BA2599A50600C4B96E /* AppDelegate.swift */,
 				B8D575BC2599A50600C4B96E /* SceneDelegate.swift */,
 				B8D575ED2599A8A500C4B96E /* TableViewController.swift */,
+				B83CB3E125AAA6A2000694AD /* SelfConfiguringCell.swift */,
 				B8D575F52599B1CD00C4B96E /* Models.swift */,
 				B870C647259AB86C008A388F /* PersonFollowingViewModel.swift */,
 				B8D575FA2599B23400C4B96E /* PersonFollowingCell.swift */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83CB3E225AAA6A2000694AD /* SelfConfiguringCell.swift in Sources */,
 				B8D575BB2599A50600C4B96E /* AppDelegate.swift in Sources */,
 				B8D575BD2599A50600C4B96E /* SceneDelegate.swift in Sources */,
 				B8D575EE2599A8A500C4B96E /* TableViewController.swift in Sources */,

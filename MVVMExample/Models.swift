@@ -13,20 +13,19 @@ enum Gender{
 
 struct Person:Hashable {
     let name:String
-    let userName:String?
+    let userName:String
     let address:String?
     let userImage:UIImage?
-
     let gender: Gender
     
     init(name:String,
+         userName:String,
          address:String? = nil,
-         userName:String? = nil,
          userImage:UIImage? = nil,
          gender:Gender = Gender.unspecified) {
         self.name = name
+        self.userName = userName
         self.address = address
-        self.userName = "abc"
         self.gender = gender
         self.userImage = UIImage(systemName: "person")
     }

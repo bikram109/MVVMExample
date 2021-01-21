@@ -7,13 +7,17 @@
 
 import UIKit
 
+/* This protocal Handle the follow button click Event */
 protocol personFollowingCellDelegate:AnyObject {
     func personFollowingTableVieCell(_ cell:PersonFollowingCell, didtap viewModel: PersonFollowingViewModel)
 }
 
+/*
+ Any action happen in view update Viewmodel.
+ Only viewmodel is connected with Tableviewcell. Model is completely seperated.
+ 
+*/
 class PersonFollowingCell: UITableViewCell {
-    
-    static let identifier = "person"
     
     var delegage:personFollowingCellDelegate?
     var viewModel:PersonFollowingViewModel?
@@ -53,19 +57,17 @@ class PersonFollowingCell: UITableViewCell {
         guard  let viewModel = viewModel else{
             return
         }
-        var newViewModel = viewModel
+        let newViewModel = viewModel
         newViewModel.following = !viewModel.following
         delegage?.personFollowingTableVieCell(self,
                                               didtap: newViewModel)
         prepareForReuse()
-        configure(with: newViewModel)
+        conguration(with: newViewModel)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -82,24 +84,6 @@ class PersonFollowingCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure (with viewModel:PersonFollowingViewModel){
-        
-        self.viewModel = viewModel
-        name.text = viewModel.name
-        userName.text = viewModel.userName
-        userImage.image = viewModel.userImage
-        
-        if viewModel.following{
-            follow.setTitle("unfollow", for: .normal)
-            follow.setTitleColor(.black, for: .normal)
-            follow.backgroundColor = .white
-        }else{
-            follow.setTitle("follow", for: .normal)
-            follow.setTitleColor(.blue, for: .normal)
-            follow.backgroundColor = .red
-        }
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         name.text = nil
@@ -107,5 +91,26 @@ class PersonFollowingCell: UITableViewCell {
         follow.setTitle(nil, for: .normal)
         imageView?.image = nil
     }
+}
 
+extension PersonFollowingCell:SelfConfiguringCell{
+
+    static let reuseIdentifier: String = "person"
+    
+    func conguration(with viewModel: PersonFollowingViewModel) {
+                self.viewModel = viewModel
+                name.text = viewModel.name
+                userName.text = viewModel.userName
+                userImage.image = viewModel.userImage
+        
+                if viewModel.following{
+                    follow.setTitle("unfollow", for: .normal)
+                    follow.setTitleColor(.black, for: .normal)
+                    follow.backgroundColor = .white
+                }else{
+                    follow.setTitle("follow", for: .normal)
+                    follow.setTitleColor(.blue, for: .normal)
+                    follow.backgroundColor = .red
+                }
+    }
 }
